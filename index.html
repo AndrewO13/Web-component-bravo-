@@ -170,13 +170,6 @@
       }
     }
 
-    // Display timer in timer box too
-    function updateBox() {
-      document.querySelector('.timer-box').textContent =
-        document.getElementById("timer-top").textContent;
-      requestAnimationFrame(updateBox);
-    }
-
     init();
     updateBox();
 
