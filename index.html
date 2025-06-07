@@ -170,7 +170,17 @@
       }
     }
 
-        // ==== Listen for URL changes if Bravo reopens with new param ====
+    // Display timer in timer box too
+    function updateBox() {
+      document.querySelector('.timer-box').textContent =
+        document.getElementById("timer-top").textContent;
+      requestAnimationFrame(updateBox);
+    }
+
+    init();
+    updateBox();
+
+    // ==== Listen for URL changes if Bravo reopens with new param ====
     window.addEventListener('focus', () => {
       // Could re-read URL params and update if necessary
     });
